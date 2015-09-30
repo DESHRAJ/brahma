@@ -1,4 +1,11 @@
 # Django settings for brahma project.
+import os
+import sys
+
+SETTINGS_DIR = os.path.dirname(__file__)
+PROJECT_ROOT = os.path.abspath(os.path.join(SETTINGS_DIR, os.pardir))
+
+
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
@@ -56,17 +63,19 @@ MEDIA_URL = ''
 # Don't put anything in this directory yourself; store your static files
 # in apps' "static/" subdirectories and in STATICFILES_DIRS.
 # Example: "/home/media/media.lawrence.com/static/"
-STATIC_ROOT = ''
+STATIC_ROOT = 'static'
 
 # URL prefix for static files.
 # Example: "http://media.lawrence.com/static/"
 STATIC_URL = '/static/'
 
 # Additional locations of static files
+STATIC_DIR = os.path.join(PROJECT_ROOT, 'static_media')
 STATICFILES_DIRS = (
     # Put strings here, like "/home/html/static" or "C:/www/django/static".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
+    STATIC_DIR,
 )
 
 # List of finder classes that know how to find static files in
@@ -102,10 +111,14 @@ ROOT_URLCONF = 'brahma.urls'
 # Python dotted path to the WSGI application used by Django's runserver.
 WSGI_APPLICATION = 'brahma.wsgi.application'
 
+TEMPLATE_DIR = os.path.join(PROJECT_ROOT, 'templates')
+
+
 TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
+    TEMPLATE_DIR,
 )
 
 INSTALLED_APPS = (
