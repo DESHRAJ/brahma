@@ -7,6 +7,8 @@ from django.conf.urls import patterns, include, url
 urlpatterns = patterns('',
     # Examples:
      url(r'^$', 'brahma.views.index', name='home'),
+     url(r'^sg/ssh/$', 'brahma.views.manage_security_groups_ssh',
+        name='manage_sec_groups_ssh'),
     # url(r'^brahma/', include('brahma.foo.urls')),
 
     # Uncomment the admin/doc line below to enable admin documentation:

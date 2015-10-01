@@ -57,7 +57,7 @@
         <div class="col-sm-3 col-md-2 sidebar">
           <ul class="nav nav-sidebar">
             <li class="active"><a href="#">Overview <span class="sr-only">(current)</span></a></li>
-            <li><a href="#" class="load-section" target="7>SSH</a></li>
+            <li><a href="#" class="load-section" target="sec-groups-ssh-div" ajax="{% url "manage_sec_groups_ssh" %}"=>SSH</a></li>
           </ul>
        </div>
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
@@ -223,6 +223,7 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="{% static "js/bootstrap.min.js" %}"></script>
+    <script src="{% static "dashboard/dashboard.js" %}"></script>
   </body>
 </html>
 
