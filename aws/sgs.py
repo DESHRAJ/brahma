@@ -13,7 +13,4 @@ def get_all_sgs():
     """
     ec2 = boto3.resource('ec2')
     security_groups = list(ec2.security_groups.all())
-    id_sg_map = {sg.id: sg for sg in security_groups}
-    return id_sg_map
-
-
+    return security_groups
