@@ -1,0 +1,34 @@
+
+<h1 class="page-header">SSH Ports</h1>
+
+<div class="table-responsive">
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Group Name</th>
+      <th>VPC Id</th>
+      <th>Source</th>
+      <th>Open For</th>
+    </tr>
+  </thead>
+  <tbody>
+
+  {% for group in sec_groups %}
+    <tr>
+        <td>{{ group.group_name }}({{ group.group_id }})</td>
+        <td>{{ group.vpc_id }}</td>
+        <td>
+            <ul>
+            {% for source in group.sources %}
+                <li>{{ source }}</li>
+            {% endfor %}
+            </ul>
+
+        </td>
+        <td>Inf</td>
+    </tr>
+    {% endfor %} 
+  </tbody>
+</table>
+</div>
+

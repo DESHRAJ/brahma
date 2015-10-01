@@ -1,4 +1,6 @@
 
+var AJAX_OK = 'OK'
+
 
 $(document).ready(function(){
     $('.load-section').on('click', function(){
